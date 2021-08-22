@@ -1,1 +1,1 @@
-web: node cliend/serve.js
+web: node serve.js

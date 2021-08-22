@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/haniehmhf/nestjs-websocket-sample/issues"
   },
-  "homepage": "https://github.com/haniehmhf/nestjs-websocket-sample#readme"
+  "homepage": "https://github.com/haniehmhf/nestjs-websocket-sample#readme",
+  "engines": {
+    "node": "12.18.2",
+    "npm": "6.14.5"
+  }
 }
