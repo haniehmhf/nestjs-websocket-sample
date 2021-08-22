@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-prebuild": "cd client && ng build"
+    "heroku-prebuild": "cd client && npm install && ng build"
   },
   "repository": {
     "type": "git",
