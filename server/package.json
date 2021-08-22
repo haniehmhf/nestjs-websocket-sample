@@ -28,10 +28,12 @@
     "@nestjs/platform-socket.io": "^8.0.6",
     "@nestjs/platform-ws": "^8.0.6",
     "@nestjs/websockets": "^8.0.6",
+    "bufferutil": "^4.0.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
-    "ws": "^8.1.0"
+    "utf-8-validate": "^5.0.5",
+    "ws": "^8.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",

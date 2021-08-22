@@ -9,7 +9,7 @@ export class SocketService {
   private socket: any;
 
   constructor(public store: Store) {
-    this.socket = webSocket("ws://localhost:8080");
+    this.socket = webSocket("wss://nest-socket-demo.herokuapp.com");
   }
 
   emitAction(action: string) {

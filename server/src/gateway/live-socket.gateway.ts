@@ -10,13 +10,14 @@ import { LiveService } from 'src/services/live.service';
 import { LIVE_ACTIONS } from 'src/store/live.action';
 import { filter, map, tap } from 'rxjs';
 
-@WebSocketGateway(8080)
+@WebSocketGateway()
 export class LiveSocketGateway {
     private logger: Logger = new Logger('AppGateway')
 
     constructor(
         public liveService: LiveService,
     ) { }
+    
     @WebSocketServer()
     server: Server;
 
