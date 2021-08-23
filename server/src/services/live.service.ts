@@ -17,7 +17,7 @@ export class LiveService {
     this.dataControl$.next({ event: LIVE_ACTIONS.LOAD_LIVES, data: this.liveInitData });
     interval(2000).subscribe((t) => {
       if (((t + 1) % 3) == 0) this.updateData()
-      if (((t + 1) % 5) == 0) this.deleteData()
+      if (((t + 1) % 5) == 0 && this.liveInitData.events.length > 4 && this.liveInitData.markets.length > 4) this.deleteData()
       if (((t + 1) % 2) == 0 && this.liveInitData.events.length <= 10 && this.liveInitData.markets.length <= 10)
         this.addData()
       if(this.liveInitData.events.length == 10 || this.liveInitData.markets.length == 10)  

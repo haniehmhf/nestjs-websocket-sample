@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { webSocket } from 'rxjs/webSocket'
 import { filter, take } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 @Injectable({ providedIn: 'root' })
 export class SocketService {
-  private socket: any;
+  private socket: any = new Subject();
 
   constructor(public store: Store) {
     this.socket = webSocket("wss://nest-socket-demo.herokuapp.com");
@@ -19,5 +19,8 @@ export class SocketService {
     })
   }
 
+  close() {
+    this.socket.complete();
+  }
 
 }

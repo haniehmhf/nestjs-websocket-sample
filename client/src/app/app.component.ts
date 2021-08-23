@@ -41,6 +41,7 @@ export class AppComponent {
   }
 
   ngOnDestroy(): void {
+    this.socketService.close();
     this.destroy$.next()
   }
 }
