@@ -1,5 +1,5 @@
 <section>
-  <button class="btn btn-danger" *ngIf="showButton" (click)="emit()">emit</button>
+  <button class="btn btn-danger" [disabled]="disable" (click)="emit()">emit</button>
   <div class="container">
     <ng-container *ngIf="!loading;else loader">
       <h3>Events</h3>

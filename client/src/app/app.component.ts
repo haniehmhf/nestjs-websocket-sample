@@ -14,7 +14,7 @@ import { ILiveState } from './store/live/live.state';
 })
 export class AppComponent {
   title = 'client';
-  showButton = true;
+  disable = false;
   liveData: any;
   loading = true;
   destroy$ = new Subject
@@ -38,7 +38,7 @@ export class AppComponent {
   }
 
   emit() {
-    this.showButton = false;
+    this.disable = true;
     this.socketService.emitAction(LIVE_ACTIONS.LOAD_LIVES);
   }
 
